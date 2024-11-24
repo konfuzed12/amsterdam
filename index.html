@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsterdam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar-dark-mode {
+            background-color: #1f1f1f !important;
+        }
+        .footer-dark-mode {
+            background-color: #1f1f1f !important;
+        }
+        .img {
+            width: 100%;
+            height: 500px;
+            background-image: url('ams1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
+    .text-container {
+        text-align: justify;
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: 4a638d;">
+        <div class="container">     
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="spots.html">Tourist Spots</a>
+                    </li>
+                </ul>
+                <button id="darkModeToggle" class="btn btn-outline-light">Dark Mode</button>
+    </nav>
+    <div class="container text-center my-5">
+        <h1 class="display-4">Welcome to Amsterdam!</h1>
+    </div>
+    <div class ="img">
+
+    </div>
+    <div class = "text-container" style="text-align: justify; margin-top: 50px; margin-left: 5%; margin-right: 5%; font-size: 30px;">
+        <p class = "text">
+            Amsterdam, city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea. 
+            It is the capital and the principal commercial and financial centre of the Netherlands.
+            <br><br>
+            Amsterdam is known for its historical attractions, for its collections of great art, 
+            and for the distinctive colour and flavour of its old sections, which have been so well preserved. 
+            However, visitors to the city also see a crowded metropolis beset by environmental pollution, traffic congestion, 
+            and housing shortages. It is easy to describe Amsterdam, which is more than 700 years old, 
+            as a living museum of a bygone age and to praise the eternal beauty of the centuries-old canals, 
+            the ancient patrician houses, and the atmosphere of freedom and tolerance, but the modern city is still working out 
+            solutions to the pressing urban problems that confront it.
+            <br><br>
+            Amsterdam is the nominal capital of the Netherlands but not the seat of government, 
+            which is The Hague. The royal family, for example, 
+            is only occasionally in residence at the Royal Palace, on the square known as the Dam, 
+            in Amsterdam. The city lacks the monumental architecture found in other capitals. 
+            There are no wide squares suitable for big parades, nor are there triumphal arches or imposing statues. 
+            Amsterdam’s intimate character is best reflected in the narrow, bustling streets of the old town, 
+            where much of the population still goes about its business. While there are reminders of the glorious past—gabled houses, 
+            noble brick facades clad with sandstone, richly decorated cornices, towers and churches, and the music of carillons 
+            and barrel organs—the realities of life in the modern city often belie this romantic image.
+            <br><br>
+            The inner city is divided by its network of canals into some 90 “islands,” and the municipality contains approximately 
+            1,300 bridges and viaducts. Amsterdam is the economic centre of the Netherlands, and there tradition persists alongside 
+            innovation. Although the city has a modern metro system, about one-fifth of the workforce still relies on the 
+            time-honoured bicycle for transportation. The city continues to be famous for its countless Chinese and Indonesian 
+            restaurants and the hundreds of houseboats that line its canals. Since the mid-1960s Amsterdam also has been known for 
+            a permissive atmosphere, and it attracts many people seeking an alternative lifestyle. Area city, 64 square miles 
+            (165 square km); metro. area, 245 square miles (635 square km). Pop. (2008 est.) city, 1,028,603; metro. area, 1,482,676.
+            <br><br>
+        </p>
+    </div>
+    <footer id="footer" class="bg-primary text-white text-center py-3" style="background-color: 4a638d";>
+        &copy; 2024 aja. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const navbar = document.getElementById('navbar');
+        const footer = document.getElementById('footer');
+
+        // Dark Mode Toggle Logic
+        darkModeToggle.addEventListener('click', () => {
+            const isDarkMode = body.classList.toggle('dark-mode');
+            navbar.classList.toggle('navbar-dark-mode', isDarkMode);
+            footer.classList.toggle('footer-dark-mode', isDarkMode);
+            
+            darkModeToggle.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+</html>

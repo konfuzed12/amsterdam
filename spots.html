@@ -10,6 +10,7 @@
         body.dark-mode {
             background-color: #121212;
             color: #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .navbar-dark-mode {
@@ -24,6 +25,7 @@
             height: 100%;
             background-color: #ffffff;
             color: #000000;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .card-dark-mode {
@@ -33,20 +35,38 @@
         }
 
         .card-img-top {
-            height: 200px;
-            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        footer {
+            padding: 1rem;
         }
     </style>
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: 4a638d;">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: #4a638d;">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="photos/amslogo.png" style="height: 40px;">
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -55,13 +75,17 @@
                     </li>
                 </ul>
                 <button id="darkModeToggle" class="btn btn-outline-light">Dark Mode</button>
+            </div>
+        </div>
     </nav>
+
+
     <div class="container text-center my-5">
         <h1 class="display-4">Tourist Destinations in Amsterdam</h1>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d10106528-Reviews-A_dam_Lookout-Amsterdam_North_Holland_Province.html">
@@ -74,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d190555-Reviews-Anne_Frank_House-Amsterdam_North_Holland_Province.html">
@@ -88,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d6024007-Reviews-Body_Worlds-Amsterdam_North_Holland_Province.html">
@@ -102,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d190573-Reviews-Centraal_Station-Amsterdam_North_Holland_Province.html">
@@ -117,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d189381-Reviews-Dam_Square-Amsterdam_North_Holland_Province.html">
@@ -131,7 +155,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d3704720-Reviews-Molen_Van_Sloten-Amsterdam_North_Holland_Province.html">
@@ -145,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d190584-Reviews-Red_Light_District-Amsterdam_North_Holland_Province.html">
@@ -160,7 +184,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d189379-Reviews-Rijksmuseum-Amsterdam_North_Holland_Province.html">
@@ -175,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d190575-Reviews-The_Jordaan-Amsterdam_North_Holland_Province.html">
@@ -189,7 +213,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d190554-Reviews-Van_Gogh_Museum-Amsterdam_North_Holland_Province.html">
@@ -205,7 +229,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d266245-Reviews-Verzetsmuseum_Amsterdam-Amsterdam_North_Holland_Province.html">
@@ -221,7 +245,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100">
                     <a
                         href="https://www.tripadvisor.com.ph/Attraction_Review-g188590-d189384-Reviews-Vondelpark-Amsterdam_North_Holland_Province.html">
@@ -238,7 +262,7 @@
             </div>
         </div>
     </div>
-    <footer id="footer" class="bg-primary text-white text-center py-3" style="background-color: 4a638d" ;>
+    <footer id="footer" class="bg-primary text-white text-center py-3" style="background-color: #4a638d;">
         &copy; 2024 aja. All rights reserved.
     </footer>
 
